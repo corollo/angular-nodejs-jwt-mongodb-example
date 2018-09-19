@@ -19,5 +19,13 @@
     },
     "devDependencies": {
         "nodemon": "^1.17.5"
+    },
+    "apidoc": {
+        "name": "todo-app api server",
+        "version": "1.0.0",
+        "title": "ToDo App Server API",
+        "template": {
+            "forceLanguage": "en"
+        }
     }
 }

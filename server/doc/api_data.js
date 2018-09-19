@@ -1,0 +1,197 @@
+define({ "api": [
+  {
+    "type": "get",
+    "url": "/api/todos/:id",
+    "title": "Todo item detail",
+    "version": "1.0.0",
+    "name": "GetTodoDetail",
+    "group": "Todo",
+    "permission": [
+      {
+        "name": "private"
+      }
+    ],
+    "description": "<p>Get the todo item detail from mongodb.</p>",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "NoAccessRight",
+            "description": "<p>Only authenticated Users can access the data.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Response (example):",
+          "content": "HTTP/1.1 401 Not Authenticated",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "./index.js",
+    "groupTitle": "Todo"
+  },
+  {
+    "type": "get",
+    "url": "/api/todos",
+    "title": "Todo list",
+    "version": "1.0.0",
+    "name": "GetTodos",
+    "group": "Todo",
+    "permission": [
+      {
+        "name": "private"
+      }
+    ],
+    "description": "<p>Get the todo list of the specific user from mongodb.</p>",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "NoAccessRight",
+            "description": "<p>Only authenticated Users can access the data.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Response (example):",
+          "content": "HTTP/1.1 401 Not Authenticated",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "./index.js",
+    "groupTitle": "Todo"
+  },
+  {
+    "type": "post",
+    "url": "/api/auth",
+    "title": "User authentication",
+    "version": "1.0.0",
+    "name": "AUthUser",
+    "group": "User",
+    "permission": [
+      {
+        "name": "none"
+      }
+    ],
+    "description": "<p>Perform the user autentication on mongodb.</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>The username of the user.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>The password of the user.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "{\n  \"username\": \"admin\",\n  \"password\": \"todo\",\n}",
+        "type": "json"
+      }
+    ],
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "NoAccessRight",
+            "description": "<p>Only authenticated Users can access the data.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Response (example):",
+          "content": "HTTP/1.1 401 Not Authenticated",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "./index.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "get",
+    "url": "/api/users",
+    "title": "User list",
+    "version": "1.0.0",
+    "name": "GetUsers",
+    "group": "User",
+    "permission": [
+      {
+        "name": "private"
+      }
+    ],
+    "description": "<p>Get the user list from mongodb.</p>",
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "NoAccessRight",
+            "description": "<p>Only authenticated Users can access the data.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Response (example):",
+          "content": "HTTP/1.1 401 Not Authenticated",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "./index.js",
+    "groupTitle": "User"
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p>"
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./doc/main.js",
+    "group": "_home_corollo_Progetti___Varie___MY_GITHUB_angular_nodejs_jwt_mongodb_example_server_doc_main_js",
+    "groupTitle": "_home_corollo_Progetti___Varie___MY_GITHUB_angular_nodejs_jwt_mongodb_example_server_doc_main_js",
+    "name": ""
+  }
+] });
